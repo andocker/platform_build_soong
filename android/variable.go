@@ -103,6 +103,7 @@ type productVariables struct {
 	DeviceAbi         *[]string `json:",omitempty"`
 	DeviceUsesClang   *bool     `json:",omitempty"`
 	DeviceVndkVersion *string   `json:",omitempty"`
+	DeviceIsContainer *bool     `json:",omitempty"`
 
 	DeviceSecondaryArch        *string   `json:",omitempty"`
 	DeviceSecondaryArchVariant *string   `json:",omitempty"`
