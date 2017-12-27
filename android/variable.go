@@ -58,6 +58,10 @@ type variableProperties struct {
 			Cflags []string
 		}
 
+		DeviceIsContainer struct {
+			Cflags []string
+		}
+
 		// treble is true when a build is a Treble compliant device.  This is automatically set when
 		// a build is shipped with Android O, but can be overriden.  This controls such things as
 		// the sepolicy split and enabling the Treble linker namespaces.
