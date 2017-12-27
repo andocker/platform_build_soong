@@ -315,6 +315,10 @@ func (compiler *baseCompiler) compilerFlags(ctx ModuleContext, flags Flags) Flag
 		}
 
 		if ctx.Device() {
+			if Bool(ctx.AConfig().ProductVariables.DeviceIsContainer) {
+				flags.GlobalFlags = append(flags.GlobalFlags, "-DANDROID_CONTAINER")
+			}
+
 			if Bool(compiler.Properties.Rtti) {
 				flags.CppFlags = append(flags.CppFlags, "-frtti")
 			} else {
